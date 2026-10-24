@@ -21,7 +21,7 @@ describe("v1 대문자 한개 테스트", () => {
   test.each([
     ["Abc", true],
     ["aBc", true],
-    ["abc", true],
+    ["abc", false],
   ])("given %s, %s", (input, expected) => {
     const result = oneUpperCaseRule(input);
     expect(result.passed).toBe(expected);
